@@ -13,8 +13,8 @@
 ### makeCacheMatrix basically lines up a list of functions that can be used to cache information about a matrix and it's
 ### inverse.
 ### There are 4 specific functions in each list:
-###       1. setMatrix:: will set the value of the matrix
-###       2. getMatrix:: will get the value of the matrix
+###       1. set:: will set the value of the matrix
+###       2. get:: will get the value of the matrix
 ###       3. setInverse:: will set the value of the inverse matrix
 ###       4. getInverse:: will get the value of the inverse matrix
 ### Pretty strait-forward. say what you wanna do and if you wanna do it to the inverse, specify.
