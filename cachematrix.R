@@ -1,16 +1,17 @@
 ## "The Matrix is a system, Neo. That system is our enemy."
 ##        -Morpheus, The Matrix (1999)
 ## So we solve it. :)
-## These functions can be used to create a cache library of matrices and thier inverses to lessen the amount of redunant computation
-## that could be done.
+## These functions can be used to create a cache library of matrices and thier inverses to lessen the amount of redunant
+## computation that could be done.
 ## Two functions are needed to be able to create and acess this matrices cache:
-##              1. makeCacheMatrix:: make a list of usable functions that allows the storage and access of a given matrix and it's
-##                    inverse
+##              1. makeCacheMatrix:: make a list of usable functions that allows the storage and access of a given matrix
+##                 and it's inverse
 ##              2. cacheSolve:: either pulls or caches the inverse of a given matrix
 
 
 
-### makeCacheMatrix basically lines up a list of functions that can be used to cache information about a matrix and it's inverse.
+### makeCacheMatrix basically lines up a list of functions that can be used to cache information about a matrix and it's
+### inverse.
 ### There are 4 specific functions in each list:
 ###       1. setMatrix:: will set the value of the matrix
 ###       2. getMatrix:: will get the value of the matrix
@@ -31,12 +32,12 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-### cacheSolve will look through the cache to figure out if the makeCacheMatrix matrix (say that 5 times fast) has an inverse already
-### calculated.
-### If it can find the matrix inverse in the cache (i.e. xIverse for x is not NULL), it will pull the inverse from the cache and let
-### you know it had been cached.
-### If, however, there isn't a matrix inversed cached, It will use solve() to find said inverse and then cache said inverse into the
-### cache so that it can be called from the cache in the future.
+### cacheSolve will look through the cache to figure out if the makeCacheMatrix matrix (say that 5 times fast) has an inverse
+### already calculated.
+### If it can find the matrix inverse in the cache (i.e. xIverse for x is not NULL), it will pull the inverse from the cache
+### and let you know it had been cached.
+### If, however, there isn't a matrix inversed cached, It will use solve() to find said inverse and then cache said inverse
+### into the cache so that it can be called from the cache in the future.
 
 cacheSolve <- function(x, ...) {
   xInverse <- x$getInverse()
